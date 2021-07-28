@@ -33,12 +33,12 @@ module load bcftools
 mkdir 08_smoove/"$CHR"
 rm -r 08_smoove/"$CHR"/temporary
 mkdir 08_smoove/"$CHR"/temporary
-export TMPDIR=/home/camer78/coregonus/SRSV_pipeline/08_smoove/"$CHR"/temporary
+export TMPDIR=/home/camer78/coregonus/SRSV_pipeline/04_smoove/"$CHR"/temporary
 
 #for small cohorts it is possible to get a jointly-called, genotyped VCF in a single command.
 # duphold to add depth annotations.
 smoove call -x --name all_"$CHR" \
---outdir 08_smoove/"$CHR" \
+--outdir 04_smoove/"$CHR" \
 --exclude 02_info/not_chromosomes_"$CHR".bed \
 --fasta 02_info/genome.fasta -p $NB_CPU \
 --duphold --genotype \
