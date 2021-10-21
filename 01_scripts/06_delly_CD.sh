@@ -2,10 +2,10 @@
 #SBATCH -J "delly_CD"
 #SBATCH -o log_%j
 #SBATCH -c 1 
-#SBATCH -p medium
+#SBATCH -p small
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=claire.merot@gmail.com
-#SBATCH --time=7-00:00
+#SBATCH --time=1-00:00
 #SBATCH --mem=2G
 
 ###this script will work on all bamfiles and run delly to detect SV

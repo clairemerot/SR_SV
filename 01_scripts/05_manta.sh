@@ -82,9 +82,6 @@ gunzip -c ${MANTA_ANALYSIS_PATH}/results/variants/diploidSV.vcf.gz | grep -v ^\#
 echo "nb of SV detected by Manta"
 grep -v ^\#\# manta_SVvcf | wc -l
 
-#remove BND
-#bcftools filter -i'INFO/SVTYPE!="BND"' -o manta_SV_noBND.vcf -O v manta_SV.vcf 
-#echo "nb of SV detected by Manta which are not BND"
-#grep -v ^\#\# manta_SV_noBND.vcf | wc -l
+bgzip ${MANTA_ANALYSIS_PATH}/manta_SV.vcf
 
 
